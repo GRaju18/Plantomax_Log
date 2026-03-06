@@ -1,0 +1,184 @@
+.bkHideChat {
+    visibility: hidden;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.bkUserInput .sapMFeedListItemTextText {
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: #4bb4ff;
+    background: #4bb4ff;
+}
+
+.bkRobotInput .sapMFeedListItemTextText {
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 10px;
+    border-color: #E5E5E5;
+    background: #E5E5E5;
+}
+
+.bkRobotInput .sapMFeedListItemTextString:after {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 0;
+    border-right: 10px solid #EFF4F9;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    color: #fff;
+}
+
+.bkRobotInput .sapMFeedListItemTextString:before {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 10px;
+    width: 0;
+    border-right: 10px solid #E5E5E5;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+
+.bkUserInput .sapMFeedListItemTextString:after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: 10px;
+    width: 0;
+    border-left: 10px solid #EFF4F9;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+
+.bkUserInput .sapMFeedListItemTextString:before {
+    content: "";
+    position: absolute;
+    right: -11px;
+    top: 10px;
+    width: 0;
+    border-left: 10px solid #E5E5E5;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+}
+
+.bkUserInput figure {
+    float: right;
+}
+
+.bkUserInput .sapMFeedListItemHasFigure {
+    margin-right: 3.75rem;
+}
+
+.sapMFeedIn {
+    width: auto;
+}
+
+.bkChatButton {
+    width: 100px;
+    height: 100px;
+    margin: 20px auto;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.bkCircle {
+    border-radius: 50%;
+}
+
+.bkCircleButton {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.bkCircleButton span.sapMBtnInner {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+/*.sapMLabel {*/
+
+
+/*    font-size: 0.675rem !important;*/
+
+
+/*}*/
+
+.titleClass {
+    font-weight: 600;
+    padding-left: 1rem;
+}
+
+.feedItemRobot .sapMFeedListItem .sapMFeedListItemText span {
+    color: #32363a !important;
+}
+
+.feedItemUserBot .sapMFeedListItem .sapMFeedListItemText span {
+    color: #fff !important;
+}
+
+html.sap-phone .bkUserInput .sapMFeedListItemText {
+    position: relative;
+    border-style: solid;
+    border-width: 6px;
+    border-radius: 6px;
+    padding: 0px;
+    border-color: #4bb4ff;
+    background: #4bb4ff;
+    clear: inherit;
+}
+html.sap-phone .bkRobotInput .sapMFeedListItemText {
+    position: relative;
+    border-style: solid;
+    border-width: 6px;
+    border-radius: 6px;
+    padding: 0px;
+    border-color: #E5E5E5;
+    background: #E5E5E5;
+    clear: inherit;
+}
+ html.sap-phone .sapMFeedListItemHeader.sapMFeedListItemHasFigure{
+	height:0rem !important;
+}
+
+.sapMFeedListItemFigure {
+    margin-top: 1rem;
+}
+
+.chatbotEnterIcon {
+    text-align: center;
+    display: grid;
+    vertical-align: top;
+}
+
+.chatBotInput {
+    box-shadow: 0 5px 40px transparent;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    color: gray;
+    background: #fff;
+    position: relative;
+    align-items: center;
+    height: 2rem;
+}
+
+.displayFeed .sapMFeedListItemImage {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 1.5rem;
+}

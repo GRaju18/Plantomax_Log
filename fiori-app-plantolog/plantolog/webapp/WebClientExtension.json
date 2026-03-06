@@ -1,0 +1,9 @@
+{
+    "tiles": [
+      {
+        "text": "Planto Log",
+        "subtitle": "Web Client Fiori Application Extension",
+        "icon": "sap-icon://history"
+      }
+    ]
+  }

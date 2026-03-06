@@ -1,0 +1,178 @@
+.donut-size {
+    font-size: 12em;
+    padding: 0.5rem;
+}
+
+.pie-wrapper {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    margin: 0px auto;
+}
+
+.pie-wrapper .pie {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, 1em, 1em, 0.5em);
+}
+
+.pie-wrapper .half-circle {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: 0.1em solid #1abc9c;
+    border-radius: 50%;
+    clip: rect(0em, 0.5em, 1em, 0em);
+}
+
+.pie-wrapper .right-side {
+    transform: rotate(0deg);
+}
+
+.pie-wrapper .label {
+    position: absolute;
+    top: 0.52em;
+    right: 0.4em;
+    bottom: 0.4em;
+    left: 0.4em;
+    display: block;
+    background: none;
+    border-radius: 50%;
+    color: #7F8C8D;
+    font-size: 0.25em;
+    line-height: 2.6em;
+    text-align: center;
+    cursor: default;
+    z-index: 2;
+}
+
+.airpre-wrapper .half-circle {
+    border: 0.1em solid #FF8A65;
+}
+
+.co2pie-wrapper .half-circle {
+    border: 0.1em solid #FFB74D;
+}
+
+.pie-wrapper .smaller {
+    padding-bottom: 20px;
+    color: #BDC3C7;
+    font-size: .45em;
+    vertical-align: super;
+}
+
+.pie-wrapper .shadow {
+    width: 100%;
+    height: 100%;
+    border: 0.1em solid #BDC3C7;
+    border-radius: 50%;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+dfn {
+    font-style: italic;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 1em 40px;
+}
+
+pre {
+    overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+code {
+    color: #1ABC9C;
+}
+
+.dashBoardPrgIcon {
+    line-height: 1.5;
+}
+
+.dashBoardBoxBorder {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+    margin: 0.5rem;
+    border-radius: 0;
+}
+
+.dashBoardBoxBorder {
+    width: 16rem;
+    text-align: center;
+}
+
+.dashBoardBoxBorder2 {
+    width: 50em !important; 
+}

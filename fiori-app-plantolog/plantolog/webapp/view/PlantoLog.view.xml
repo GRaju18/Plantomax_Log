@@ -1,0 +1,95 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.9b.PlantoLog.controller.PlantoLog"
+	xmlns:f="sap.f" xmlns:table="sap.ui.table" xmlns:tnt="sap.tnt" height="100%">
+	<f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false" showFooter="true">
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="B1 Log"/>
+				</f:heading>
+				<f:actions>
+					<Button type="Emphasized" press="refreshLogtable" icon="sap-icon://refresh"/>
+				</f:actions>
+				<f:navigationActions>
+					<Button text="{jsonModel>/refreshText}" type="Transparent" enabled="false" class="lastUpdate" width="13rem"/>
+				</f:navigationActions>
+			</f:DynamicPageTitle>
+		</f:title>
+		<!-- DynamicPage Content -->
+		<f:content>
+			<IconTabBar selectedKey="SL" id="Log" select="refreshLogtable" stretchContentHeight="true">
+				<items>
+					<IconTabFilter text="Pneno Track" key="PT"/>
+					<IconTabFilter text="Micro Propagation" key="MP"/>
+					<IconTabFilter text="Macro Propagation" key="MAP"/>
+					<IconTabFilter text="Mother Planner" key="MP"/>
+					<IconTabFilter text="Cultivation" key="CP"/>
+				</items>
+				<content>
+					<table:Table class="uiTableTable" id="clonePlannerTable" selectionMode="MultiToggle" rows="{path:'jsonModel>/cloneTableData'}"
+						visibleRowCountMode="Auto" rowSelectionChange="handleRowSelection" filter="customFilter" cellClick="cellClick">
+						<table:rowSettingsTemplate>
+							<table:RowSettings highlight="{=${jsonModel>U_NLGST} === '200' ? 'Success' : 'Error'}"/>
+						</table:rowSettingsTemplate>
+						<table:columns>
+							<table:Column sortProperty="U_NDTTM" filterProperty="U_NDTTM" tooltip="Date Time" width="10%">
+								<Label text="{i18n>DateTime}" design="Bold"/>
+								<table:template>
+									<Text text="{jsonModel>U_NDTTM}" wrapping="false"/>
+								</table:template>
+							</table:Column>
+							<table:Column sortProperty="Creator" filterProperty="Creator" tooltip="User ID" width="10%">
+								<Label text="{i18n>UserId}" design="Bold"/>
+								<table:template>
+									<Text text="{jsonModel>Creator}" wrapping="false"/>
+								</table:template>
+							</table:Column>
+							<table:Column sortProperty="U_NLGMT" filterProperty="U_NLGMT" tooltip="Method" width="10%">
+								<Label text="{i18n>Method}" design="Bold"/>
+								<table:template>
+									<Text text="{jsonModel>U_NLGMT}" wrapping="false"/>
+								</table:template>
+							</table:Column>
+							<table:Column sortProperty="U_NLURL" filterProperty="U_NLURL" tooltip="URL" width="15%">
+								<Label text="{i18n>URL}" design="Bold"/>
+								<table:template>
+									<Text text="{jsonModel>U_NLURL}" wrapping="false" tooltip="{jsonModel>U_NLURL}"/>
+								</table:template>
+							</table:Column>
+							<table:Column sortProperty="U_NLGBD" filterProperty="U_NLGBD" tooltip="Body" width="30%">
+								<Label text="{i18n>Body}" design="Bold"/>
+								<table:template>
+									<Link text="{jsonModel>U_NLGBD}" tooltip="{U_NLGBD}" press="onCellPress"/>
+								</table:template>
+							</table:Column>
+							<table:Column sortProperty="U_NLGRP" filterProperty="U_NLGRP" tooltip="Response" width="20%">
+								<Label text="{i18n>Response}" design="Bold"/>
+								<table:template>
+									<Link text="{jsonModel>U_NLGRP}" tooltip="{U_NLGRP}" press="onCellPress"/>
+								</table:template>
+							</table:Column>
+							<table:Column sortProperty="U_NLGST" filterProperty="U_NLGST" tooltip="Status" width="8%">
+								<Label text="{i18n>Status}" design="Bold"/>
+								<table:template>
+									<Text text="{jsonModel>U_NLGST}" wrapping="false"/>
+								</table:template>
+							</table:Column>
+							<table:Column hAlign="Center" width="5%">
+								<Label text="" design="Bold"/>
+								<table:template>
+									<core:Icon src="sap-icon://synchronize" color="#d80202" press="onSyncBack"
+										visible="{path:'jsonModel>U_NLGST',targetType: 'any',formatter:'.formatter.checkForSyncIcon'}" tooltip="{jsonModel>statusText}"/>
+								</table:template>
+							</table:Column>
+						</table:columns>
+					</table:Table>
+				</content>
+			</IconTabBar>
+		</f:content>
+		<f:footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Text text="{jsonModel>/versionInfo}"/>
+			</OverflowToolbar>
+		</f:footer>
+	</f:DynamicPage>
+</mvc:View>

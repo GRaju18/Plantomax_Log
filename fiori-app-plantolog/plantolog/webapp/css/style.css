@@ -1,0 +1,23 @@
+/* Enter your custom styles here */
+
+.CustomListLI .sapMLIB {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+    margin: .2rem;
+    padding: 1rem;
+    border-radius: 0;
+}
+
+.sapFDynamicPageContent,
+.sapFDynamicPageContentFitContainer {
+    padding: 1rem 1.5rem 0 1.5rem;
+}
+.sapMDialogScrollCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastUpdate {
+    opacity: 1;
+}
