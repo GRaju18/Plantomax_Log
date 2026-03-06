@@ -22,6 +22,7 @@ sap.ui.define([
 		onInit: function () {
 			this.getOwnerComponent().getRouter(this).attachRoutePatternMatched(this._objectMatched, this);
 		},
+		
 		_objectMatched: function (oEvent) {
 			if (oEvent.getParameter("name") === "PlantoLog") {
 				this.byId("Log").setSelectedKey("PT");
@@ -39,7 +40,7 @@ sap.ui.define([
 			var selTab = this.byId("Log").getSelectedKey();
 			var filters;
 			if (selTab == "PT") {
-				filters = "?$filter=U_NAPP eq 'Pheno Track' ";
+				filters = "?$filter=U_NAPP eq 'PhenoTrack' ";
 			} else if (selTab == "MP") {
 				filters = "?$filter=U_NAPP eq 'MicroPropagation' ";
 			} else if (selTab == "MAP") {
